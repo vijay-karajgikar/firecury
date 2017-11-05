@@ -10,8 +10,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get('*', (req, res) => {
-    res.json("Welcome to firecury application");
-    res.json("This application is created on " + Date.now + " by Vijay Karajgikar");
+    var jsonString = "Welcome to Firecury Application, Created by Vijay Karajgikar at " + Date();
+    res.json(jsonString);
 });
 
 /*  Mongo DB Connection */
