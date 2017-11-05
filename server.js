@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get('*', (req, res) => {
     res.json("Welcome to firecury application");
+    res.json("This application is created on " + Date.now + " by Vijay Karajgikar");
 });
 
 /*  Mongo DB Connection */
