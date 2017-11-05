@@ -1,0 +1,27 @@
+{
+  "name": "firecury",
+  "version": "1.0.0",
+  "description": "Firecury Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijay-karajgikar/firecury.git"
+  },
+  "author": "Vijay Karajgikar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijay-karajgikar/firecury/issues"
+  },
+  "homepage": "https://github.com/vijay-karajgikar/firecury#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
+    "morgan": "^1.9.0"
+  }
+}
