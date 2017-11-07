@@ -7,9 +7,6 @@
     "node": "6.10.2",
     "npm": "3.10.10"
   },
-  "scripts": {
-      "postinstall": "ng build"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vijay-karajgikar/firecury.git"
