@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Firecury Server",
   "main": "server.js",
+  "engines": {
+    "node": "6.10.2",
+    "npm": "3.10.10"
+  },
   "scripts": {
       "start": "concurrently \"npm run tsc:w\" ",
       "tsc": "tsc",
       "tsc:w": "tsc -w",
-      "typings": "typings",
-      "postinstall": "typings install"
+      "typings": "typings"
   },
   "repository": {
     "type": "git",
