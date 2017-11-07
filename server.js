@@ -8,10 +8,10 @@ const app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "node_modules")));
 
 app.get('*', (req, res) => {
-    var jsonString = "Welcome to Firecury Application, Created by Vijay Karajgikar at " + Date();
-    res.json(jsonString);
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 /*  Mongo DB Connection */
