@@ -8,10 +8,7 @@
     "npm": "3.10.10"
   },
   "scripts": {
-      "start": "concurrently \"npm run tsc:w\" ",
-      "tsc": "tsc",
-      "tsc:w": "tsc -w",
-      "typings": "typings"
+      "postinstall": "ng build"
   },
   "repository": {
     "type": "git",
