@@ -1,33 +1,34 @@
-const express = require("express");
-const path = require("path");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const config = require("./app/static/config");
-const app = express();
+const express           = require("express");
+const path              = require("path");
+const mongoose          = require("mongoose");
+const bodyParser        = require("body-parser");
+const morgan            = require('morgan');
+const config            = require("./app/static/config");
 
-app.use(express.static(__dirname + '/public'));
+const app               = express();
+const userRouter        = require('./app/routes/userRoutes');
+
+app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "node_modules")));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use('/user', userRouter);
+
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
-/*  Mongo DB Connection */
+
 var uri = config.db;
-mongoose.connect(uri, {
-    useMongoClient: true,
-    promiseLibrary: global.Promise,
-});
-
+mongoose.connect(uri, {useMongoClient: true, promiseLibrary: global.Promise });
 const db = mongoose.connection;
 db.on('error', (err) => {
     console.log("Error connecting to the database");
     console.log(err);
 });
-
 db.once('open', () => {
+
 
     /* Create Http server */
     app.listen(config.port, () => {
@@ -39,7 +40,7 @@ db.once('open', () => {
         console.log(" Firecury server available at http://localhost:" + config.port);
         console.log("");
         console.log("==========================================================");
-    });
 
+    });
 
 });
