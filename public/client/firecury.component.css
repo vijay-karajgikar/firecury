@@ -1,0 +1,36 @@
+.temp-website {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("./client/images/FirecuryBackground.JPG");
+    background-size: cover;
+    height: 100vh;
+}
+
+p {
+    font-face: 'Cairo', sans-serif;
+    color: white;
+    font-size: 20px;
+
+}
+
+h1 {
+    font-family: 'Cairo', cursive;
+    color: white;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    vertical-align: center;
+    color: white;
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.right-container {
+    margin-top: 40px;
+    margin-right: 80px;
+}

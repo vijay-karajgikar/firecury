@@ -14,7 +14,7 @@ var FirecuryComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'firecury',
             templateUrl: './client/firecury.component.html',
-            styles: ['./client/firecury.component.css']
+            styleUrls: ['./client/firecury.component.css']
         })
     ], FirecuryComponent);
     return FirecuryComponent;
